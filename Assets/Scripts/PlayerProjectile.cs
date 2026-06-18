@@ -10,9 +10,9 @@ public class PlayerProjectile : MonoBehaviour
     private void Awake()
     {
         boxcollider = GetComponent<BoxCollider2D>();
-        //spriteRenderer = GetComponent<SpriteRenderer>();
-        //color = new Color(Random.Range(0.3f, 1f), Random.Range(0.3f, 1f), Random.Range(0.3f, 1f));
-        //spriteRenderer.color = color;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        color = new Color(Random.Range(0.3f, 1f), Random.Range(0.3f, 1f), Random.Range(0.3f, 1f));
+        spriteRenderer.color = color;
     }
     void Update()
     {
