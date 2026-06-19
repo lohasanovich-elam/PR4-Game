@@ -20,16 +20,10 @@ public class PlayerProjectile : MonoBehaviour
             spriteRenderer.color = color;
         }
     }
+
     void Update()
     {
         transform.Translate(Vector3.up * speedbullet, Space.World);
 
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Boundary")
-        {
-            Destroy(gameObject);
-        }
     }
 }
