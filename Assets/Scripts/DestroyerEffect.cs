@@ -2,11 +2,14 @@ using UnityEngine;
 
 public class DestroyerEffect : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Bullet1")
         {
-            Destroy(collision.gameObject);
+            if (collision.gameObject.name == "Bullet(Clone)")
+            {
+                Destroy(collision.gameObject);
+                print("pens");
+            }
         }
     }
 }
