@@ -26,7 +26,8 @@ public class Player : MonoBehaviour
             if (cooldownBullet >= 1f)
             {
                 cooldownBullet = 0f;
-                Instantiate(bulletPrefab, new Vector2(transform.position.x, transform.position.y + 1f), Quaternion.identity);
+                var newBullet = Instantiate(bulletPrefab, new Vector2(transform.position.x, transform.position.y + 1f), Quaternion.identity);
+                newBullet.name = "Bullet";
             }
         }
         if (cooldownBullet < 1f)
