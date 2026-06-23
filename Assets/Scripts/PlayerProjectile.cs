@@ -21,6 +21,17 @@ public class PlayerProjectile : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        {
+            if (collision.gameObject.name == "LineBit")
+            {
+                Destroy(gameObject);
+                print("bulletDied");
+            }
+        }
+    }
+
     void Update()
     {
         transform.Translate(Vector3.up * speedbullet, Space.World);
