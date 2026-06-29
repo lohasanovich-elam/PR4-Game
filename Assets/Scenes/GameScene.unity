@@ -280,9 +280,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a50a05c190745b8458e20c7f7b7a7b23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image1: {fileID: 0}
-  image2: {fileID: 0}
-  waitTime: 0.5
+  image1: {fileID: -7801670545921603074, guid: 7b0d2afe56c5a9d47b7f73d40121c72a, type: 3}
+  image2: {fileID: 2817099889775846832, guid: 8f367cffbde1f2443bdf62380a32dd03, type: 3}
+  waitTime: 1
 --- !u!1 &73420515
 GameObject:
   m_ObjectHideFlags: 0
