@@ -1,12 +1,13 @@
 using UnityEngine;
 using System.Collections;
 
-public class EnemyAnim : MonoBehaviour
+public class BorderAnimate : MonoBehaviour
 {
     public Sprite image1;
     public Sprite image2;
+    public Sprite image3;
     private bool isAnimating = false;
-    public float waitTime = 0.5f;
+    public float waitTime = 0.3f;
     private SpriteRenderer spriteR;
 
     private void Start()
@@ -17,16 +18,18 @@ public class EnemyAnim : MonoBehaviour
     {
         if (!isAnimating)
         {
-            StartCoroutine(Yoghurt());
+            StartCoroutine(BorderAnim());
         }
     }
 
-    IEnumerator Yoghurt()
+    IEnumerator BorderAnim()
     {
         isAnimating = true;
         spriteR.sprite = image1;
         yield return new WaitForSeconds(waitTime);
         spriteR.sprite = image2;
+        yield return new WaitForSeconds(waitTime);
+        spriteR.sprite = image3;
         yield return new WaitForSeconds(waitTime);
         isAnimating = false;
     }
